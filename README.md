@@ -1,5 +1,7 @@
 # bilhop-assignment
 
+## Problem description
+
 For this assignment, the idea is to create a Node.js based application serving a Rövarspråket translator over a REST API.
 
 You have complete freedom on how to design the service and how it works, as long as you follow the requirements below:
@@ -12,6 +14,14 @@ You have complete freedom on how to design the service and how it works, as long
 4. Upload the code to Github;
 5. Share the details with us for review and further discussion.
 
+## Summary
+
+The project is devided into two parts, Server and client.
+
+Server is a nodejs application that serves the APIs required.
+
+Client is a simple application that simplates chat between two users. Client code is writtin in react. Vite is used for building and building code. Tailwind is used for the styling.
+
 ## Getting Started
 
 To run the application, you will need to have Docker and Docker Compose installed on your machine.
@@ -21,3 +31,23 @@ To run the application, you will need to have Docker and Docker Compose installe
 3. Copy `.env-example` as `.env`
 4. Copy `docker-compose.override-example.yml` as `docker-compose.override.yml`
 5. Start the service by running `docker-compose up`
+
+## Versions of APP
+
+### Version 1
+
+You can find a tag with version v1.0.0 which is simple version of the task. It fulfills all the requirements. If you would like to to check it out, please download the source code or use git to check the tag.
+
+1. `git checkout tags/v1.0.0`
+2. Follow [Getting started](#getting-started)
+
+### Version 2
+
+In version 2 I have:
+
+- Added docker files and compose files
+- Updated server code so that normal and rovarsprak APIs to accept an array of message instead of single message. This helps support both single text translations as well as mulitple.
+- In client code, optimized API calls by send multiple translations in single call.
+- Added validations
+- Refactored code for good practices
+- Enhanced UI

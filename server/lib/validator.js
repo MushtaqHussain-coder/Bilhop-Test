@@ -1,8 +1,7 @@
-const response = require("./response");
+const response = require('./response');
 
 const validateTranslateNormal = (req, res, next) => {
   const resp = response();
-console.log('->', req.body);
   const { texts } = req.body;
 
   if (!Array.isArray(texts) || !texts?.length) {
@@ -23,7 +22,6 @@ console.log('->', req.body);
 
 const validateTranslateReverse = (req, res, next) => {
   validateTranslateNormal(req, res, next);
-  // next();
 };
 
 module.exports = {

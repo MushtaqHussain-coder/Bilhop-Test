@@ -1,21 +1,21 @@
-version: "3"
+version: '3'
 
 services:
   server:
-    container_name: "server"
+    container_name: 'server'
     volumes:
-      - "./server:/usr/app"
+      - './server:/usr/app'
     env_file: ./.env
     environment:
-      - "NODE_ENV=development"
+      - 'NODE_ENV=development'
     ports:
-      - "3000:3000"
+      - '3000:3000'
 
   client:
-    container_name: "client"
+    container_name: 'client'
     volumes:
-      - "./client:/usr/app"
+      - './client:/usr/app'
     environment:
-      - "NODE_ENV=development"
+      - 'NODE_ENV=development'
     ports:
-      - "8000:8000"
+      - '8000:8000'
