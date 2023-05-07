@@ -1,35 +1,36 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import React from "react";
 import "./App.css";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <div>
-        <h1 className="text-3xl font-bold underline">Hello from Tailwind!</h1>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="App">
+      <Header />
+      <main className="flex flex-col items-center p-4">
+    <div className="w-full max-w-md my-4">
+    </div>
+    <div className="text-center mb-4">
+      <h2 className="text-xl font-semibold">Learn Rövarspråket</h2>
+      <hr className="border-blue-500 w-24 mx-auto" />
+      <p className="mt-2">Text & Instructions</p>
+    </div>
+    <div className="flex md:flex-nowrap justify-center w-full max-w-5xl">
+      <div className="w-full md:w-1/2 p-4">
+        <div className="border border-blue-500 p-4 rounded-md bg-white shadow-lg">
+          <h3 className="text-lg font-semibold">User 1</h3>
+        </div>
       </div>
-      <h1>Vite + React + Tailwind</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="w-0 md:w-px md:mx-4 bg-blue-500"></div>
+      <div className="w-full md:w-1/2 p-4">
+        <div className="border border-blue-500 p-4 rounded-md bg-white shadow-lg">
+          <h3 className="text-lg font-semibold">User 2</h3>
+        </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
+  </main>
+      <Footer />
+    </div>
   );
 }
 
