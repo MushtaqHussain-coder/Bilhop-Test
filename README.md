@@ -29,8 +29,10 @@ To run the application, you will need to have Docker and Docker Compose installe
 1. Clone the repository to your local machine.
 2. Open a terminal and navigate to the root directory of the repository.
 3. Copy `.env-example` as `.env`
-4. Copy `docker-compose.override-example.yml` as `docker-compose.override.yml`
-5. Start the service by running `docker-compose up`
+4. Copy `client/.env-example` as `client/.env`
+5. Copy `docker-compose.override-example.yml` as `docker-compose.override.yml`
+6. Start the service by running `docker-compose up`
+7. If all goes well, server will be running at http://localhost:3000/ and client at http://localhost:8000/
 
 ## Versions of APP
 
