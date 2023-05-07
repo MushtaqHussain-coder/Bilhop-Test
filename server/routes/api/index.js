@@ -1,12 +1,9 @@
 const router = require('express').Router();
 const normal = require('./translate/normal');
 const reverse = require('./translate/reverse');
+const { validateTranslateNormal, validateTranslateReverse } = require('../../lib/validator');
 
-router.get('/greet', (req, res, next) => {
-  res.status(200).json({ success: true, message: 'hi' });
-});
-
-router.post('/translate/normal', normal);
-router.post('/translate/rovarsprak', reverse);
+router.post('/translate/normal', validateTranslateNormal, normal);
+router.post('/translate/rovarsprak', validateTranslateReverse, reverse);
 
 module.exports = router;

@@ -20,7 +20,39 @@ const fromRovarspraket = (str) => {
   return str.replaceAll(/([bcdfghjklmnpqrstvwxyz])o\1/gi, substitute);
 };
 
+/**
+ *  Translate an array of texts
+ *
+ * @param {*} texts array
+ * @returns
+ */
+const translateManyToRovarspraket = (texts) => {
+  const transalations = [];
+  for (const text of texts) {
+    transalations.push(toRovarspraket(text));
+  }
+
+  return transalations;
+};
+
+/**
+ *  Translate an array of texts
+ *
+ * @param {*} texts array
+ * @returns
+ */
+const translateManyFromRovarspraket = (texts) => {
+  const transalations = [];
+  for (const text of texts) {
+    transalations.push(fromRovarspraket(text));
+  }
+
+  return transalations;
+};
+
 module.exports = {
   toRovarspraket,
   fromRovarspraket,
+  translateManyToRovarspraket,
+  translateManyFromRovarspraket,
 };

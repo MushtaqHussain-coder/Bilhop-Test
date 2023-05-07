@@ -1,16 +1,11 @@
 const response = require('../../../lib/response');
-const { toRovarspraket } = require('../../../lib/translate');
+const { translateManyToRovarspraket } = require('../../../lib/translate');
 
 const normal = async (req, res, next) => {
   const resp = response();
-  const { text } = req.body;
-  if (typeof text !== 'string' || text.length < 1) {
-    resp.success = false;
-    resp.message = 'Invalid or missing required field(s)';
-    return res.status(400).json(resp);
-  }
+  const { texts } = req.body;
 
-  resp.data = toRovarspraket(text);
+  resp.data = translateManyToRovarspraket(texts);
 
   res.status(200).json(resp);
 };
