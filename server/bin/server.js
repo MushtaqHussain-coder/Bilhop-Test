@@ -5,5 +5,5 @@ const { PORT } = process.env;
 const port = PORT ? parseInt(PORT, 10) : 3000;
 
 app.listen(port, () => {
-  console.log(`Express listening on port ${port}`);
+  console.log(`Express: http://localhost:${port}`);
 });
