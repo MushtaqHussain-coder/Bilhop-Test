@@ -1,0 +1,13 @@
+{
+  "name": "bilhop-test",
+  "version": "1.0.0",
+  "description": "Node.js based application serving a Rövarspråket translator over a REST API and a simple chat simulation",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}
