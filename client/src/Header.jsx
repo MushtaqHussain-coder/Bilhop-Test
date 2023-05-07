@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const Header = () => (
   <header className="bg-blue-500 text-white font-bold py-4">

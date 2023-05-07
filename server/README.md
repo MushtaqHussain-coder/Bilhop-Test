@@ -8,6 +8,7 @@ HTTP request logging using the morgan middleware
 Automatic server restarts during development using nodemon
 
 ## Getting Started
+
 To get started with the Bilhop Test Backend, follow these steps:
 
 Clone this repository to your local machine using git clone https://github.com/your-username/bilhop-test-backend.git.
@@ -19,6 +20,7 @@ Start the server by running npm start. This will start the server in production 
 Alternatively, you can start the server in development mode using npm run dev. This will automatically restart the server whenever you make changes to the code.
 
 ## Dependencies
+
 The following dependencies are required to run the Bilhop Test Backend:
 
 cors: enables Cross-Origin Resource Sharing (CORS) for the server
@@ -28,9 +30,11 @@ morgan: logs HTTP requests to the console
 nodemon: automatically restarts the server during development
 
 ## Development Dependencies
+
 The following development dependencies are required to work with the Bilhop-assignment Backend:
 
 prettier: an opinionated code formatter that helps keep code consistent and readable
 
 ## License
+
 This project is licensed under the MIT License. See the LICENSE file for details.
